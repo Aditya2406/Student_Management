@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TEACHERS</title>
+</head>
+<body>
+<h3>EXISTING TEACHERS LIST</h3>
+    {% if te|length>0 %}
+        <ul>
+             {% for i in te %}
+            <li>{{ i }}</li>
+             {% endfor %}
+         </ul>
+    {% else %}
+        <p> No teacher record found </p>
+    {% endif %}
+
+<form action="{{ url_for('teachers') }}" method ='POST'>
+     <label for="sub">Choose the subject:</label>
+  <select id="sub" name="sub">
+    <option value="maths">maths</option>
+    <option value="physics">physics</option>
+    <option value="chemsitry">chemistry</option>
+    </select>
+  enter teacher name : <input type="text" name="tname">
+  <input type="submit">
+
+
+</form>
+
+
+</body>
+</html>

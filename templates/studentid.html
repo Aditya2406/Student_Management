@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ID</title>
+</head>
+<body>
+<CENTER><h1>STUDENT DETAILS</h1></CENTER>
+<br>
+<hr>
+<br>
+<h1>NAME= {{ name }}
+    <br>
+    ROLL NO.= {{ rollno }}
+    <br>
+
+    <br>
+
+       SUBJECT SELECTED ARE:-
+    <br>
+    <center><li>{{ sub1 }}</li></center>
+    <br>
+   <center><li>{{ sub2 }}</li></center>
+    <br>
+     <center><li>{{ sub3 }}</li></center>
+    </h1>
+
+   {% if sub1=="maths" %}
+    <h1> MATHS TEACHER IS &nbsp  {{ MT }}  </h1>
+    {% elif sub1=="physics" %}
+         <h1> PHYSICS TEACHER IS &ndsp {{ PT }}</h1>
+    {% elif sub1=="chemistry" %}
+         <h1> CHEMISTRY TEACHER IS &ndsp {{ CT }}</h1>
+    {% endif %}
+
+    {% if sub2=="maths" %}
+    <h1> MATHS TEACHER IS &nbsp{{ MT }}</h1>
+    {% elif sub2=="physics" %}
+         <h1> PHYSICS TEACHER IS &nbsp{{ PT }}</h1>
+    {% elif sub2=="chemistry" %}
+         <h1> CHEMISTRY TEACHER IS &nbsp {{ CT }}</h1>
+    {% endif %}
+
+     {% if sub3=="maths" %}
+    <h1> MATHS TEACHER IS &nbsp {{ MT }}</h1>
+    {% elif sub3=="physics" %}
+         <h1> PHYSICS TEACHER IS &nbsp {{ PT }}</h1>
+    {% elif sub3=="chemistry" %}
+         <h1> CHEMISTRY TEACHER IS &nbsp {{ CT }}</h1>
+    {% endif %}
+
+</body>
+</html>

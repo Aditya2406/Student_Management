@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>homepage</title>
+</head>
+<body>
+ <h3>EXISTING STUDENTS LIST</h3>
+  {% if std|length>0 %}
+     <ul>
+         {% for i in std %}
+         <li>{{ i }}</li>
+         {% endfor %}
+     </ul>
+  {% else %}
+      <p> No students record found </p>
+  {% endif %}
+<br>
+<hr>
+<br>
+ <h3> ADD NEW STUDENTS</h3>
+ <form action="{{ url_for('index') }}" method ='POST'>
+   ENTER YOUR NAME: &nbsp &nbsp &nbsp &nbsp<input type="text" name="name">
+    <br>
+   ENTER YOUR ROLL NO :&nbsp    <input type="number" name="rn">
+    <br>
+SELECT SUBJECT 01 ---> <select id="sub_1" name="sub_1">
+    <option value="maths">maths</option>
+    <option value="physics">physics</option>
+    <option value="chemistry">chemistry</option>
+    </select>
+    <br>
+ SELECT SUBJECT 02 --->  <select id="sub_2" name="sub_2">
+    <option value="maths">maths</option>
+    <option value="physics">physics</option>
+    <option value="chemistry">chemistry</option>
+    </select>
+     <br>
+ SELECT SUBJECT 03 --->  <select id="sub_3" name="sub_3">
+    <option value="maths">maths</option>
+    <option value="physics">physics</option>
+    <option value="chemistry">chemistry</option>
+    </select>
+     <hr>
+     <br>
+    <center><input type ="submit" value="submit"></center>
+ </form>
+<br>
+<hr>
+<br>
+<form action="{{ url_for('teachers') }}">
+              <input type ="submit" value="click here for teachers">
+ <br>
+<hr>
+<br>
+</form>
+<form action="{{ url_for('ENTER_DETAILS') }}">
+              <input type ="submit" value="CLICK HERE FOR STUDENT ID &#128512">
+
+</form>
+
+
+</body>
+</html>
